@@ -32,8 +32,7 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
 
         btnLogin.setOnClickListener {
-            validateLogin()
-        }
+            validateLogin() }
         }
 
     }

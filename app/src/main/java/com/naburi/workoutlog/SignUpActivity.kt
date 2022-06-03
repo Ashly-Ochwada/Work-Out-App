@@ -14,9 +14,9 @@ class SignUpActivity : AppCompatActivity() {
     lateinit var etLastName: TextInputEditText
     lateinit var tilLastName: TextInputLayout
     lateinit var etEmail: TextInputEditText
-    lateinit var tilEmail: TextInputEditText
+    lateinit var tilEmail: TextInputLayout
     lateinit var etConfirmPassword: TextInputEditText
-    lateinit var tilConfirmPassword: TextInputEditText
+    lateinit var tilConfirmPassword: TextInputLayout
     lateinit var etPassword: TextInputEditText
     lateinit var tilPassword: TextInputLayout
     lateinit var btnSignUp: Button
@@ -40,13 +40,14 @@ class SignUpActivity : AppCompatActivity() {
         tvHaveAnAccount.setOnClickListener {
             val intent = Intent(this,LoginActivity::class.java)
             startActivity(intent)
-        }
-        btnSignUp.setOnClickListener { validateLogin() }
 
+            btnSignUp.setOnClickListener { validateSignUp() }
+        }
 
     }
-    fun validateLogin() {
+    fun validateSignUp() {
         var error = false
+        tilLastName.error=null
         tilFirstName.error = null
         tilEmail.error = null
         tilPassword.error = null
@@ -62,12 +63,12 @@ class SignUpActivity : AppCompatActivity() {
         var email = etEmail.text.toString()
         if (email.isBlank()) {
             tilEmail.error = "Email is required"
-            error = true
+
         }
         var password = etPassword.text.toString()
         if (password.isBlank()) {
             tilPassword.error = "Password is required"
-            error = true
+
         }
         var confirmPassword=etConfirmPassword.text.toString()
         if (confirmPassword.isBlank()){
