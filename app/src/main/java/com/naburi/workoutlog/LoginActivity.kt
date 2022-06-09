@@ -33,7 +33,8 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
         btnLogin.setOnClickListener {
-            validateLogin() }
+            validateLogin()
+        startActivity(Intent(this,HomeActivity::class.java))}
 
     }
 
@@ -56,6 +57,7 @@ class LoginActivity : AppCompatActivity() {
             error = true
         }
         if (!error) {
+            //startActivity(Intent(this,HomeActivity::class.java))
 
         }
     }
