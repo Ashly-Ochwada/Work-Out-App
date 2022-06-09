@@ -41,8 +41,8 @@ class SignUpActivity : AppCompatActivity() {
             val intent = Intent(this,LoginActivity::class.java)
             startActivity(intent)
 
-            btnSignUp.setOnClickListener { validateSignUp() }
         }
+        btnSignUp.setOnClickListener { validateSignUp() }
 
     }
     fun validateSignUp() {
@@ -73,6 +73,9 @@ class SignUpActivity : AppCompatActivity() {
         var confirmPassword=etConfirmPassword.text.toString()
         if (confirmPassword.isBlank()){
             tilConfirmPassword.error="Confirm Password is required"
+        }
+        if (password!=confirmPassword){
+            tilConfirmPassword.error = "Passwords do not match"
         }
 
     }
