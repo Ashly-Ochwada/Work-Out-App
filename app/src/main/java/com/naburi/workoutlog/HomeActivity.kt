@@ -15,5 +15,27 @@ class HomeActivity : AppCompatActivity() {
         bnvHome = findViewById(R.id.bnvHome)
         fcvHome = findViewById(R.id.fcvHome)
 
+        setupBottomNav()
+
+    }
+    fun setupBottomNav(){
+        bnvHome.setOnItemSelectedListener { item->
+            when(item.itemId){
+                R.id.plan ->{
+                    supportFragmentManager.beginTransaction().replace(R.id.fcvHome, PlanFragment()).commit()
+                    true
+
+                }
+                R.id.track ->{
+                    supportFragmentManager.beginTransaction().replace(R.id.fcvHome, TrackFragment()).commit()
+                    true
+                }
+                R.id.profile->{
+                    supportFragmentManager.beginTransaction().replace(R.id.fcvHome,ProfileFragment()).commit()
+                    true
+                }
+                else->false
+            }
+        }
     }
 }
