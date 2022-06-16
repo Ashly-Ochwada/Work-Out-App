@@ -42,7 +42,8 @@ class SignUpActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
-        btnSignUp.setOnClickListener { validateSignUp() }
+        btnSignUp.setOnClickListener {
+            validateSignUp() }
 
     }
     fun validateSignUp() {

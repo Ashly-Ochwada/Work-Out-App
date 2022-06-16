@@ -3,6 +3,6 @@
 <item>
     <bitmap
         android:gravity="fill"
-        android:src="@drawable/img"/>
+        android:src="@drawable/splash_bg"/>
 </item>
 </selector>
