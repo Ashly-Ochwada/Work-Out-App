@@ -197,14 +197,13 @@
         android:layout_width="30dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/etPhoneNumber"
+        app:layout_constraintBottom_toBottomOf="@+id/tilPhoneNumber"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/etPhoneNumber"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toTopOf="@+id/tilPhoneNumber"
         app:srcCompat="@drawable/ic_baseline_local_phone_24" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etPhoneNumber"
+        android:id="@+id/tilPhoneNumber"
         android:layout_width="324dp"
         android:layout_height="32dp"
         android:layout_marginTop="16dp"
@@ -213,8 +212,9 @@
         app:layout_constraintTop_toBottomOf="@+id/tilConfirmPassword">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tilPhoneNumber"
+            android:id="@+id/etPhoneNumber"
             android:layout_width="match_parent"
+            android:background="@android:color/transparent"
             android:layout_height="match_parent"
             android:hint="@string/phone_number" />
     </com.google.android.material.textfield.TextInputLayout>
