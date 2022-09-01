@@ -1,10 +1,11 @@
-package com.naburi.workoutlog
+package com.naburi.workoutlog.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.naburi.workoutlog.R
 
 
 class PlanFragment : Fragment() {

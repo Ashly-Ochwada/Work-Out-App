@@ -1,11 +1,9 @@
-package com.naburi.workoutlog
+package com.naburi.workoutlog.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.FragmentContainerView
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.naburi.workoutlog.R
 import com.naburi.workoutlog.databinding.ActivityHomeBinding
-import com.naburi.workoutlog.databinding.ActivityLoginBinding
 
 class HomeActivity : AppCompatActivity() {
     lateinit var binding: ActivityHomeBinding
@@ -29,8 +27,11 @@ class HomeActivity : AppCompatActivity() {
                     supportFragmentManager.beginTransaction().replace(R.id.fcvHome, TrackFragment()).commit()
                     true
                 }
-                R.id.profile->{
-                    supportFragmentManager.beginTransaction().replace(R.id.fcvHome,ProfileFragment()).commit()
+                R.id.profile ->{
+                    supportFragmentManager.beginTransaction().replace(
+                        R.id.fcvHome,
+                        ProfileFragment()
+                    ).commit()
                     true
                 }
                 else->false

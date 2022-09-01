@@ -1,13 +1,8 @@
-package com.naburi.workoutlog
+package com.naburi.workoutlog.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
-import com.google.android.material.textfield.TextInputEditText
-import com.google.android.material.textfield.TextInputLayout
-import com.naburi.workoutlog.databinding.ActivityHomeBinding
 import com.naburi.workoutlog.databinding.ActivitySignUpBinding
 
 class SignUpActivity : AppCompatActivity() {
@@ -19,7 +14,7 @@ class SignUpActivity : AppCompatActivity() {
 
 
         binding.tvHaveAnAccount.setOnClickListener {
-            val intent = Intent(this,LoginActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
 
         }
