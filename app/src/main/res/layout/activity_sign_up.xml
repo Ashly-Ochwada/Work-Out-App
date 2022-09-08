@@ -10,7 +10,7 @@
         android:id="@+id/tilFirstName"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="324dp"
-        android:layout_height="32dp"
+        android:layout_height="61dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
@@ -32,7 +32,7 @@
         android:id="@+id/tilLastName"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="324dp"
-        android:layout_height="32dp"
+        android:layout_height="61dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
@@ -53,7 +53,7 @@
         android:id="@+id/tilEmail"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="324dp"
-        android:layout_height="32dp"
+        android:layout_height="61dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
@@ -74,7 +74,7 @@
         android:id="@+id/tilPassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="324dp"
-        android:layout_height="32dp"
+        android:layout_height="61dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
@@ -96,12 +96,10 @@
         android:id="@+id/tilConfirmPassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="324dp"
-        android:layout_height="32dp"
+        android:layout_height="61dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/etPhoneNumber"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/tilPassword"
@@ -120,13 +118,13 @@
         android:id="@+id/btnSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="20dp"
         android:text="Sign Up"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.456"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPhoneNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/tilPhoneNumber" />
 
     <TextView
         android:id="@+id/tvHaveAnAccount"
@@ -204,19 +202,24 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tilPhoneNumber"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="324dp"
-        android:layout_height="32dp"
+        android:layout_height="61dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView6"
         app:layout_constraintTop_toBottomOf="@+id/tilConfirmPassword">
 
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etPhoneNumber"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:background="@android:color/transparent"
-            android:layout_height="match_parent"
-            android:hint="@string/phone_number" />
+            android:hint="@string/phone_number"
+            android:inputType="phone"
+            android:textSize="20sp"/>
+
     </com.google.android.material.textfield.TextInputLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

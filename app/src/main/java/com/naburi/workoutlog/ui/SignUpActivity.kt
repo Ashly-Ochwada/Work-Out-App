@@ -72,6 +72,7 @@ class SignUpActivity : AppCompatActivity() {
         if(!error){
             val registerRequest = RegisterRequest(firstname, lastname,phonenumber,email,password )
             makeRegisterRequest(registerRequest)
+            startActivity(Intent(this,LoginActivity::class.java))
         }
 
     }
