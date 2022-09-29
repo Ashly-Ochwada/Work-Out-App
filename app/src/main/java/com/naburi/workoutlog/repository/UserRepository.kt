@@ -4,6 +4,7 @@ import com.naburi.workoutlog.api.ApiClient
 import com.naburi.workoutlog.api.ApiInterface
 import com.naburi.workoutlog.models.LogInRequest
 import com.naburi.workoutlog.models.LogInResponse
+import com.naburi.workoutlog.models.RegisterRequest
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.invoke
 import kotlinx.coroutines.withContext
@@ -16,5 +17,10 @@ class UserRepository {
             = withContext(Dispatchers.IO){
         val response=apiClient.loginUser(loginRequest)
         return@withContext response
+    }
+    suspend fun registerUser(registerRequest: RegisterRequest)
+            = withContext(Dispatchers.IO){
+        val responce=apiClient.registerUser(registerRequest)
+        return@withContext responce
     }
 }
